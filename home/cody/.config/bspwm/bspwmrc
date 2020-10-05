@@ -1,0 +1,70 @@
+#! /bin/sh
+
+sxhkd &
+
+bspc monitor -d 1 2 3 4 5 6 7 8
+
+polybar top &
+#/usr/local/bin/polybar-launch &
+
+#/usr/bin/rslsync --config $HOME/.config/rslsync/rslsync.conf &
+
+# set wallpaper
+nitrogen --restore &
+
+picom -C &
+
+# adjust TrackPoint sensitivity
+xinput --set-prop $(xinput | perl -ne 'if(/TrackPoint.*id=(\d+)/) { print $1; }') 'libinput Accel Speed' -0.40
+
+# network manager applet
+#nm-applet &
+
+#parcellite -d &
+
+#pnmixer &
+
+#pulseaudio --daemonize=true &
+#pulseaudio --start &
+
+#xss-lock -- i3lock &
+
+# bind capslock to control
+setxkbmap -option ctrl:nocaps
+
+# switch left alt and left super key
+setxkbmap -option altwin:swap_lalt_lwin
+
+# set PrtSc key to Windows (Super) key
+setxkbmap -option altwin:prtsc_rwin
+
+# swap alt and Windows (Super) keys
+setxkbmap -option altwin:swap_alt_win
+
+# bspc configurations
+bspc config border_width 1
+#bspc config window_gap 7
+bspc config window_gap 0
+bspc config top_padding 22
+bspc config focused_border_color "#e59400"
+bspc config presel_feedback_color "#84f09c"
+bspc config active_border_color "#2f343f"
+bspc config pointer_motion_interval 10
+bspc config pointer_action1 move
+bspc config pointer_action2 resize_side
+bspc config pointer_action3 resize_corner
+bspc config initial_polarity second_child
+bspc config pointer_follows_monitor true
+bspc config click_to_focus true
+bspc config split_ratio 0.50
+bspc config borderless_monocle true
+bspc config paddingless_monocle false
+bspc config gapless_monocle true
+bspc config single_monocle true
+#bspc config external_rules_command "/home/cody/.config/bspwm/external_rules"
+
+bspc rule -a feh state=floating
+bspc rule -a firefox-nightly state=tiled
+
+# fix java apps, Looking Glass 3D
+wmname LG3D
