@@ -179,10 +179,6 @@ XF86MonBrightnessUp
 XF86MonBrightnessDown
     intelbacklight -dec 500
 
-# Create an invisible pane
-super + ctrl + i
-	urxvt +sb -title 'pseudoframe' -transparent -name 'pseudoframe' -e sh -c 'tput civis; sleep 365d'
-
 # Application Shortcuts
 super + alt + c
     google-chrome-stable
