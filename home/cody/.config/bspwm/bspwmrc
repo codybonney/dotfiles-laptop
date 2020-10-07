@@ -15,7 +15,7 @@ nitrogen --restore &
 picom -C &
 
 # adjust TrackPoint sensitivity
-xinput --set-prop $(xinput | perl -ne 'if(/TrackPoint.*id=(\d+)/) { print $1; }') 'libinput Accel Speed' -0.40
+xinput --set-prop $(xinput | perl -ne 'if(/TrackPoint.*id=(\d+)/) { print $1; }') 'libinput Accel Speed' -0.5
 
 # network manager applet
 #nm-applet &
