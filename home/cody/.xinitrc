@@ -21,6 +21,8 @@ set -U SXHKD_SHELL /bin/sh &
 xset -b &
 xrdb -merge ~/.Xresources &
 sxhkd &
+
+# Change X shaped default cursor to left pointer. Window managers like BSPWM will not do this for you.
 xsetroot -cursor_name left_ptr &
 
 # disable touchpad tap-to-click and scrolling while typing
