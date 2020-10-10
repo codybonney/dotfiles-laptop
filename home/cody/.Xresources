@@ -6,7 +6,7 @@ Xft.antialias: 1
 Xft.rgba: 1
 Xft.dpi: 96
 
-rofi.terminal: urxvt
+rofi.terminal: alacritty
 rofi.ssh-client: ssh
 rofi.ssh-command: {terminal} -e "{ssh-client} {host}"
 rofi.hide-scrollbar: true
@@ -33,5 +33,5 @@ rofi.color-urgent: #273238, #ff1844, #273238, #394249, #ff1844
 *color14: #34e2e2
 *color15: #eeeeec
 
-Xcursor.theme: Capitaine
+Xcursor.theme: capitaine-cursors
 Xcursor.size: 24
