@@ -2,4 +2,5 @@ killall polybar
 
 polybar top &
 
-xrandr --output DP1 --mode 3440x1440 --rate 120
+# Output to connected display and turn off laptop display
+xrandr --output DP1 --mode 3440x1440 --rate 120 --output eDP1 --off
